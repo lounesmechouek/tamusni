@@ -1,0 +1,12 @@
+$primary-color: #6444c6;
+$secondary-color: #250f64;
+$regular-font-color: #000000;
+
+@import "src/scss/reset.scss";
+
+@import "assets/fonts/fonts.scss";
+@import "src/scss/base.scss";
+@import "src/scss/template/default.scss";
+@import "src/scss/template/online.scss";
+@import "src/scss/views/welcome.scss";
+@import "src/scss/views/admin/dashboard.scss";

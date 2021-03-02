@@ -1,0 +1,42 @@
+
+[
+    { 
+        "title" : "Accueil",
+        "path" : ".\\assets\\material\\accueil-icon-primary.svg",
+        "op-path" : ".\\assets\\material\\accueil-icon-secondary.svg",
+        "pageName" : "welcome",
+        "subcat" : null 
+    },
+    {
+        "title" : "L'École",
+        "path" : ".\\assets\\material\\ecole-icon-primary.svg",
+        "op-path" : "",
+        "pageName" : "presentation",
+        "subcat" : null 
+    },
+    {
+        "title" : "Cycles",
+        "path" : ".\\assets\\material\\cycles-icon-primary.svg",
+        "op-path" : "", 
+        "pageName" : "cycle",
+        "subcat" : [
+            "Primaire", "Moyen", "Secondaire"
+        ]
+    },
+    {
+        "title" : "Espace",
+        "path" : ".\\assets\\material\\espaces-icon-primary.svg",
+        "op-path" : "", 
+        "pageName" : "login",
+        "subcat" : [
+            "Parents", "Élèves"
+        ]
+    },
+    {
+        "title" : "Contact",
+        "path" : ".\\assets\\material\\contact-icon-primary.svg",
+        "op-path" : "",
+        "pageName" : "contact",
+        "subcat" : null 
+    }
+]
