@@ -4,8 +4,16 @@ namespace App\View\Template;
 
 use App;
 
+/**
+* Class OnlineView
+* Définit le template pour les pages authentifiées
+* @package App\View\Template
+*/
 class OnlineView{
 
+    /**
+     * Code HTML relatif à la barre latérale
+     */
     private function getSideBar(){
 ?>
 <!DOCTYPE html>
@@ -36,10 +44,10 @@ class OnlineView{
         <div class="sb-separator-container">
             <img src="../../public/assets/material/separator.svg" />
         </div>
-        <div class="sb-elt-container">
+        <a href="<?= "?page=" . $_SESSION["authtype"] . ".settings" ?>" class="sb-elt-container">
             <img src="../../public/assets/material/parametres-icon.svg"/>
             <p>Paramètres</p>
-        </div>
+        </a>
     </div>
 </section>
 
@@ -49,15 +57,19 @@ class OnlineView{
 ?>
 <section id="online-header">
     <div class="header-container">
-        <h1>Bienvenue <?= $_SESSION["authtype"] ?> </h1>
-        <div class="usr-container">
-            <img src="" />
+        <h1>Bienvenue <?= ucfirst($_SESSION["authtype"]) ?> </h1>
+        <a href="<?= "?page=" . $_SESSION["authtype"] . ".profile" ?>" class="usr-container">
+            <img src="../../public/assets/users/usr-pic.svg" />
             <p><?= ucfirst($_SESSION["authtype"]) ?></p>
-        </div>
+        </a>
     </div>
-<section>
+</section>
 <?php
     }
+    /**
+     * Code HTML relatif à la partie principale
+     * Chaque contrôleur y fait un appel en spécifiant le contenu de la page "$content"
+     */
     private function getCorps($content){
 ?>
 
@@ -65,19 +77,31 @@ class OnlineView{
 
 <?php
     }
+    /**
+     * Code HTML relatif au pied de page
+     */
     private function getFooter(){
 ?>
+<p id="typeuser" style="display:none"><?= $_SESSION["authtype"]; ?></p>
+<p id="actualpage" style="display:none"><?= $_GET["page"]; ?></p>
 </body>
 <script type="text/javascript" src="../../public/src/js/jquery.js"></script>
-<script type="text/javascript" src="../../public/src/js/script.js"></script>
+<script type="text/javascript" src="../../public/src/js/online-menu.js"></script>
+<script type="text/javascript" src="../../public/src/js/features.js"></script>
+<script type="text/javascript" src="../../public/src/js/popup.js"></script>
 </html>
 
 <?php
     }
 
+    /**
+     * Affichage de toute la page
+     */
     public function displayView($content){
         $this->getSideBar();
-        $this->getHeader();
+        if($_GET["page"] === "admin.dashboard"){
+            $this->getHeader();
+        }
         $this->getCorps($content);
         $this->getFooter();
     }

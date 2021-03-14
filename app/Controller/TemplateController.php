@@ -3,8 +3,18 @@ namespace App\Controller;
 use App\View\Template\DefaultView;
 use App\View\Template\OnlineView;
 
+/**
+ * Class TemplateController
+ * Permet de gérer les vues "template"
+ * @package App\Controller
+ */
 class TemplateController{
-
+    /**
+     * @var TemplateController $instance Les controllers publics sont des singletons (créés une seule fois dans l'app)
+     * @var DefaultView $defaultView Instance de la vue propre au template pour les pages publiques
+     * @var OnlineView $onlineView Instance de la vue propre au template pour les pages après connexion (admin/parent/eleve/enseignant)
+     * @var String $currentUsedTemplate Template actuellement utilisé
+     */
     private static $instance;
     private static $defaultView;
     private static $onlineView;
@@ -19,6 +29,9 @@ class TemplateController{
         }
     }
 
+    /**
+     * Implémentation du patron singleton
+     */
     public static function getInstance(){
         if(self::$instance === null){
             self::$instance = new TemplateController();
@@ -26,10 +39,16 @@ class TemplateController{
         return self::$instance;
     }
 
-    public static function setCurrentTemplate($newTemplate){
-        self::$currentUsedTemplate = $newTemplate;
+    /**
+     * @param String $currentTmp Le nouveau contrôleur
+     */
+    public static function setCurrentTemplate($currentTmp){
+        self::$currentUsedTemplate = $currentTmp;
     }
 
+    /**
+     * @param String $templateName Nom du template à afficher
+     */
     public static function getTemplate($templateName){
         if($templateName === "DefaultView"){
             self::setCurrentTemplate($templateName);

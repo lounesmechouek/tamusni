@@ -1,16 +1,76 @@
 #lp-form {
+  text-align: center;
   width: 100%;
-  background-color: blue;
   .lp-separator {
     width: 80%;
+    margin-left: 10%;
   }
   h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     font-family: "Poppins-SemiBold";
+    color: $secondary-color;
   }
   .lp-form-container {
+    position: relative;
     width: 60%;
-    margin-top: 5%;
+    margin-top: 2.5%;
+    margin-left: 20%;
     padding: 10%;
+    border: 3px solid black;
+    margin-bottom: 10%;
+  }
+  label {
+    margin-top: 5%;
+  }
+  label + input {
+    border: 1px solid $regular-font-color;
+    margin-left: 35%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+  }
+  #submitButton {
+    position: absolute;
+    left: 42.5%;
+    top: 65%;
+    background-color: $primary-color;
+    color: white;
+    padding: 1.5%;
+    border-radius: 3px;
+    margin-top: 2.5%;
+  }
+  #submitButton:hover {
+    background-color: white;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+}
+
+#lp-espace {
+  > a {
+    margin-left: 75%;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 1.5%;
+  }
+  > a:hover {
+    color: white;
+    background-color: $primary-color;
+  }
+
+  > h2 {
+    margin-left: 5%;
+    font-size: 1.8em;
+  }
+  .lp-type-articles {
+    position: relative;
+    margin-top: 5%;
+    margin-left: 20%;
+    .lp-article {
+      width: 250px;
+      height: 270px;
+      border: 3px solid black;
+      position: relative;
+      margin-bottom: 5%;
+    }
   }
 }

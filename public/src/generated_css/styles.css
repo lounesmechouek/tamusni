@@ -229,24 +229,34 @@ h1 {
 #online-sb .sb-container .sb-elt-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   width: 50%;
   margin-left: 25%;
+  margin-top: 10%;
   padding: 5%;
   border-radius: 25%;
 }
 #online-sb .sb-container .sb-elt-container p {
+  position: relative;
   font-size: 0.8em;
   padding-left: 10%;
 }
 #online-sb .sb-container .sb-elt-container img {
+  position: relative;
+  left: 0;
   width: 20%;
+}
+#online-sb .sb-container .selected {
+  background-color: #6444c6;
 }
 #online-sb .sb-container .sb-separator-container {
   position: relative;
   left: 15%;
   width: 70%;
+}
+
+.sb-elt-container:hover {
+  background-color: #6444c6;
 }
 
 #online-header {
@@ -259,7 +269,27 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 7.5%;
+  margin-bottom: 5%;
+}
+#online-header .usr-container {
+  background-color: #250f64;
+  padding: 1% 2.5% 1% 2.5%;
+  border-radius: 25%;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-right: 7.5%;
+}
+#online-header .usr-container img {
+  position: relative;
+  left: 0;
+}
+#online-header .usr-container p {
+  margin-left: 15%;
+}
+
+.usr-container:hover {
+  opacity: 0.9;
 }
 
 .wp-diapo-container {
@@ -307,16 +337,23 @@ h1 {
   padding-right: 5%;
 }
 .wp-menu-container .wp-menu-elt {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  display: block;
   font-family: "Poppins-SemiBold";
   background-color: #6444c6;
   color: white;
   border-radius: 35%;
   border: 3px solid #6444c6;
   padding: 1.25%;
+}
+.wp-menu-container .wp-menu-elt .wp-menu-elt-ext {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.wp-menu-container .wp-menu-elt .wp-menu-subcat {
+  margin-top: 2%;
+  display: none;
 }
 .wp-menu-container .wp-menu-elt p {
   padding-left: 15%;
@@ -337,6 +374,580 @@ h1 {
   text-decoration: underline;
   transform: scale(1.05);
   transition: 0.3s;
+}
+
+#lp-form {
+  text-align: center;
+  width: 100%;
+}
+#lp-form .lp-separator {
+  width: 80%;
+  margin-left: 10%;
+}
+#lp-form h1 {
+  font-size: 3em;
+  font-family: "Poppins-SemiBold";
+  color: #250f64;
+}
+#lp-form .lp-form-container {
+  position: relative;
+  width: 60%;
+  margin-top: 2.5%;
+  margin-left: 20%;
+  padding: 10%;
+  border: 3px solid black;
+  margin-bottom: 10%;
+}
+#lp-form label {
+  margin-top: 5%;
+}
+#lp-form label + input {
+  border: 1px solid #000000;
+  margin-left: 35%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+#lp-form #submitButton {
+  position: absolute;
+  left: 42.5%;
+  top: 65%;
+  background-color: #6444c6;
+  color: white;
+  padding: 1.5%;
+  border-radius: 3px;
+  margin-top: 2.5%;
+}
+#lp-form #submitButton:hover {
+  background-color: white;
+  border: 1px solid #6444c6;
+  color: #6444c6;
+}
+
+#lp-espace > a {
+  margin-left: 75%;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 1.5%;
+}
+#lp-espace > a:hover {
+  color: white;
+  background-color: #6444c6;
+}
+#lp-espace > h2 {
+  margin-left: 5%;
+  font-size: 1.8em;
+}
+#lp-espace .lp-type-articles {
+  position: relative;
+  margin-top: 5%;
+  margin-left: 20%;
+}
+#lp-espace .lp-type-articles .lp-article {
+  width: 250px;
+  height: 270px;
+  border: 3px solid black;
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.addh-container {
+  color: #000000;
+  margin-left: 20%;
+  padding-left: 7.5%;
+  margin-right: 2%;
+}
+.addh-container .row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.addh-container .row-container .addh-elt-container {
+  display: block;
+  border-radius: 25%;
+  margin-top: 5%;
+  background-color: blue;
+}
+.addh-container .row-container .addh-elt-container div {
+  background-color: #c4c4c4;
+}
+.addh-container .row-container .addh-elt-container div img {
+  width: 162px;
+  height: 108px;
+}
+.addh-container .row-container .addh-elt-container div p {
+  font-size: 0.8em;
+  font-family: "Poppins-SemiBold";
+}
+
+#wsp-articles,
+#wsp-presentation,
+#up-usrs,
+#edp-edt {
+  color: #000000;
+  margin-left: 20%;
+  padding-left: 7.5%;
+  padding-top: 7.5%;
+  margin-right: 2%;
+}
+#wsp-articles h1,
+#wsp-presentation h1,
+#up-usrs h1,
+#edp-edt h1 {
+  margin-bottom: 2%;
+}
+#wsp-articles .wsp-gestion-btn,
+#wsp-presentation .wsp-gestion-btn,
+#up-usrs .wsp-gestion-btn,
+#edp-edt .wsp-gestion-btn {
+  width: 40%;
+  position: relative;
+  left: 50%;
+  margin-bottom: 3%;
+  display: flex;
+  align-items: center;
+}
+#wsp-articles .wsp-gestion-btn a,
+#wsp-presentation .wsp-gestion-btn a,
+#up-usrs .wsp-gestion-btn a,
+#edp-edt .wsp-gestion-btn a {
+  color: white;
+  padding: 2.5%;
+  border-radius: 23%;
+  background-color: #6444c6;
+}
+#wsp-articles .wsp-gestion-btn a:first-child,
+#wsp-presentation .wsp-gestion-btn a:first-child,
+#up-usrs .wsp-gestion-btn a:first-child,
+#edp-edt .wsp-gestion-btn a:first-child {
+  margin-left: 30%;
+}
+#wsp-articles .wsp-gestion-btn a:nth-child(2),
+#wsp-presentation .wsp-gestion-btn a:nth-child(2),
+#up-usrs .wsp-gestion-btn a:nth-child(2),
+#edp-edt .wsp-gestion-btn a:nth-child(2) {
+  margin-left: 5%;
+}
+#wsp-articles .wsp-gestion-btn a:hover,
+#wsp-presentation .wsp-gestion-btn a:hover,
+#up-usrs .wsp-gestion-btn a:hover,
+#edp-edt .wsp-gestion-btn a:hover {
+  text-decoration: underline;
+}
+#wsp-articles .wsp-articles-container,
+#wsp-articles .up-container,
+#wsp-presentation .wsp-articles-container,
+#wsp-presentation .up-container,
+#up-usrs .wsp-articles-container,
+#up-usrs .up-container,
+#edp-edt .wsp-articles-container,
+#edp-edt .up-container {
+  width: 100%;
+}
+#wsp-articles .wsp-articles-container table,
+#wsp-articles .up-container table,
+#wsp-presentation .wsp-articles-container table,
+#wsp-presentation .up-container table,
+#up-usrs .wsp-articles-container table,
+#up-usrs .up-container table,
+#edp-edt .wsp-articles-container table,
+#edp-edt .up-container table {
+  text-align: center;
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+#wsp-articles .wsp-articles-container table thead,
+#wsp-articles .up-container table thead,
+#wsp-presentation .wsp-articles-container table thead,
+#wsp-presentation .up-container table thead,
+#up-usrs .wsp-articles-container table thead,
+#up-usrs .up-container table thead,
+#edp-edt .wsp-articles-container table thead,
+#edp-edt .up-container table thead {
+  width: 100%;
+  color: white;
+  background-color: #6444c6;
+}
+#wsp-articles .wsp-articles-container table tbody tr td:nth-child(2),
+#wsp-articles .up-container table tbody tr td:nth-child(2),
+#wsp-presentation .wsp-articles-container table tbody tr td:nth-child(2),
+#wsp-presentation .up-container table tbody tr td:nth-child(2),
+#up-usrs .wsp-articles-container table tbody tr td:nth-child(2),
+#up-usrs .up-container table tbody tr td:nth-child(2),
+#edp-edt .wsp-articles-container table tbody tr td:nth-child(2),
+#edp-edt .up-container table tbody tr td:nth-child(2) {
+  padding-left: 10%;
+  text-align: left;
+}
+#wsp-articles .wsp-articles-container table tbody a:hover,
+#wsp-articles .up-container table tbody a:hover,
+#wsp-presentation .wsp-articles-container table tbody a:hover,
+#wsp-presentation .up-container table tbody a:hover,
+#up-usrs .wsp-articles-container table tbody a:hover,
+#up-usrs .up-container table tbody a:hover,
+#edp-edt .wsp-articles-container table tbody a:hover,
+#edp-edt .up-container table tbody a:hover {
+  text-decoration: underline;
+}
+#wsp-articles .wsp-add-popup,
+#wsp-articles .wsp-del-popup,
+#wsp-articles .wsp-pres-del-popup,
+#wsp-articles .wsp-pres-add-popup,
+#wsp-articles .up-usrs-del,
+#wsp-presentation .wsp-add-popup,
+#wsp-presentation .wsp-del-popup,
+#wsp-presentation .wsp-pres-del-popup,
+#wsp-presentation .wsp-pres-add-popup,
+#wsp-presentation .up-usrs-del,
+#up-usrs .wsp-add-popup,
+#up-usrs .wsp-del-popup,
+#up-usrs .wsp-pres-del-popup,
+#up-usrs .wsp-pres-add-popup,
+#up-usrs .up-usrs-del,
+#edp-edt .wsp-add-popup,
+#edp-edt .wsp-del-popup,
+#edp-edt .wsp-pres-del-popup,
+#edp-edt .wsp-pres-add-popup,
+#edp-edt .up-usrs-del {
+  padding-left: 5%;
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 45%;
+  width: 400px;
+  height: 400px;
+  text-align: left;
+  background: black;
+  box-shadow: 0px 2px 6px black;
+  border-radius: 3px;
+  color: white;
+}
+#wsp-articles .wsp-add-popup p,
+#wsp-articles .wsp-del-popup p,
+#wsp-articles .wsp-pres-del-popup p,
+#wsp-articles .wsp-pres-add-popup p,
+#wsp-articles .up-usrs-del p,
+#wsp-presentation .wsp-add-popup p,
+#wsp-presentation .wsp-del-popup p,
+#wsp-presentation .wsp-pres-del-popup p,
+#wsp-presentation .wsp-pres-add-popup p,
+#wsp-presentation .up-usrs-del p,
+#up-usrs .wsp-add-popup p,
+#up-usrs .wsp-del-popup p,
+#up-usrs .wsp-pres-del-popup p,
+#up-usrs .wsp-pres-add-popup p,
+#up-usrs .up-usrs-del p,
+#edp-edt .wsp-add-popup p,
+#edp-edt .wsp-del-popup p,
+#edp-edt .wsp-pres-del-popup p,
+#edp-edt .wsp-pres-add-popup p,
+#edp-edt .up-usrs-del p {
+  margin-bottom: 2%;
+  font-size: 1em;
+}
+#wsp-articles .wsp-add-popup form input,
+#wsp-articles .wsp-del-popup form input,
+#wsp-articles .wsp-pres-del-popup form input,
+#wsp-articles .wsp-pres-add-popup form input,
+#wsp-articles .up-usrs-del form input,
+#wsp-presentation .wsp-add-popup form input,
+#wsp-presentation .wsp-del-popup form input,
+#wsp-presentation .wsp-pres-del-popup form input,
+#wsp-presentation .wsp-pres-add-popup form input,
+#wsp-presentation .up-usrs-del form input,
+#up-usrs .wsp-add-popup form input,
+#up-usrs .wsp-del-popup form input,
+#up-usrs .wsp-pres-del-popup form input,
+#up-usrs .wsp-pres-add-popup form input,
+#up-usrs .up-usrs-del form input,
+#edp-edt .wsp-add-popup form input,
+#edp-edt .wsp-del-popup form input,
+#edp-edt .wsp-pres-del-popup form input,
+#edp-edt .wsp-pres-add-popup form input,
+#edp-edt .up-usrs-del form input {
+  border: 1px solid white;
+  padding: 2%;
+  border-radius: 3px;
+}
+#wsp-articles .wsp-add-popup form select,
+#wsp-articles .wsp-del-popup form select,
+#wsp-articles .wsp-pres-del-popup form select,
+#wsp-articles .wsp-pres-add-popup form select,
+#wsp-articles .up-usrs-del form select,
+#wsp-presentation .wsp-add-popup form select,
+#wsp-presentation .wsp-del-popup form select,
+#wsp-presentation .wsp-pres-del-popup form select,
+#wsp-presentation .wsp-pres-add-popup form select,
+#wsp-presentation .up-usrs-del form select,
+#up-usrs .wsp-add-popup form select,
+#up-usrs .wsp-del-popup form select,
+#up-usrs .wsp-pres-del-popup form select,
+#up-usrs .wsp-pres-add-popup form select,
+#up-usrs .up-usrs-del form select,
+#edp-edt .wsp-add-popup form select,
+#edp-edt .wsp-del-popup form select,
+#edp-edt .wsp-pres-del-popup form select,
+#edp-edt .wsp-pres-add-popup form select,
+#edp-edt .up-usrs-del form select {
+  margin-top: 5%;
+}
+#wsp-articles .wsp-add-popup form select option,
+#wsp-articles .wsp-del-popup form select option,
+#wsp-articles .wsp-pres-del-popup form select option,
+#wsp-articles .wsp-pres-add-popup form select option,
+#wsp-articles .up-usrs-del form select option,
+#wsp-presentation .wsp-add-popup form select option,
+#wsp-presentation .wsp-del-popup form select option,
+#wsp-presentation .wsp-pres-del-popup form select option,
+#wsp-presentation .wsp-pres-add-popup form select option,
+#wsp-presentation .up-usrs-del form select option,
+#up-usrs .wsp-add-popup form select option,
+#up-usrs .wsp-del-popup form select option,
+#up-usrs .wsp-pres-del-popup form select option,
+#up-usrs .wsp-pres-add-popup form select option,
+#up-usrs .up-usrs-del form select option,
+#edp-edt .wsp-add-popup form select option,
+#edp-edt .wsp-del-popup form select option,
+#edp-edt .wsp-pres-del-popup form select option,
+#edp-edt .wsp-pres-add-popup form select option,
+#edp-edt .up-usrs-del form select option {
+  color: #6444c6;
+  border: 1px solid white;
+}
+#wsp-articles .wsp-add-popup form .popup-btn,
+#wsp-articles .wsp-del-popup form .popup-btn,
+#wsp-articles .wsp-pres-del-popup form .popup-btn,
+#wsp-articles .wsp-pres-add-popup form .popup-btn,
+#wsp-articles .up-usrs-del form .popup-btn,
+#wsp-presentation .wsp-add-popup form .popup-btn,
+#wsp-presentation .wsp-del-popup form .popup-btn,
+#wsp-presentation .wsp-pres-del-popup form .popup-btn,
+#wsp-presentation .wsp-pres-add-popup form .popup-btn,
+#wsp-presentation .up-usrs-del form .popup-btn,
+#up-usrs .wsp-add-popup form .popup-btn,
+#up-usrs .wsp-del-popup form .popup-btn,
+#up-usrs .wsp-pres-del-popup form .popup-btn,
+#up-usrs .wsp-pres-add-popup form .popup-btn,
+#up-usrs .up-usrs-del form .popup-btn,
+#edp-edt .wsp-add-popup form .popup-btn,
+#edp-edt .wsp-del-popup form .popup-btn,
+#edp-edt .wsp-pres-del-popup form .popup-btn,
+#edp-edt .wsp-pres-add-popup form .popup-btn,
+#edp-edt .up-usrs-del form .popup-btn {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+#wsp-articles .wsp-add-popup form .popup-btn input:hover,
+#wsp-articles .wsp-del-popup form .popup-btn input:hover,
+#wsp-articles .wsp-pres-del-popup form .popup-btn input:hover,
+#wsp-articles .wsp-pres-add-popup form .popup-btn input:hover,
+#wsp-articles .up-usrs-del form .popup-btn input:hover,
+#wsp-presentation .wsp-add-popup form .popup-btn input:hover,
+#wsp-presentation .wsp-del-popup form .popup-btn input:hover,
+#wsp-presentation .wsp-pres-del-popup form .popup-btn input:hover,
+#wsp-presentation .wsp-pres-add-popup form .popup-btn input:hover,
+#wsp-presentation .up-usrs-del form .popup-btn input:hover,
+#up-usrs .wsp-add-popup form .popup-btn input:hover,
+#up-usrs .wsp-del-popup form .popup-btn input:hover,
+#up-usrs .wsp-pres-del-popup form .popup-btn input:hover,
+#up-usrs .wsp-pres-add-popup form .popup-btn input:hover,
+#up-usrs .up-usrs-del form .popup-btn input:hover,
+#edp-edt .wsp-add-popup form .popup-btn input:hover,
+#edp-edt .wsp-del-popup form .popup-btn input:hover,
+#edp-edt .wsp-pres-del-popup form .popup-btn input:hover,
+#edp-edt .wsp-pres-add-popup form .popup-btn input:hover,
+#edp-edt .up-usrs-del form .popup-btn input:hover {
+  cursor: pointer;
+  background-color: #6444c6;
+  color: white;
+}
+#wsp-articles .wsp-add-popup form .popup-btn input:first-child,
+#wsp-articles .wsp-del-popup form .popup-btn input:first-child,
+#wsp-articles .wsp-pres-del-popup form .popup-btn input:first-child,
+#wsp-articles .wsp-pres-add-popup form .popup-btn input:first-child,
+#wsp-articles .up-usrs-del form .popup-btn input:first-child,
+#wsp-presentation .wsp-add-popup form .popup-btn input:first-child,
+#wsp-presentation .wsp-del-popup form .popup-btn input:first-child,
+#wsp-presentation .wsp-pres-del-popup form .popup-btn input:first-child,
+#wsp-presentation .wsp-pres-add-popup form .popup-btn input:first-child,
+#wsp-presentation .up-usrs-del form .popup-btn input:first-child,
+#up-usrs .wsp-add-popup form .popup-btn input:first-child,
+#up-usrs .wsp-del-popup form .popup-btn input:first-child,
+#up-usrs .wsp-pres-del-popup form .popup-btn input:first-child,
+#up-usrs .wsp-pres-add-popup form .popup-btn input:first-child,
+#up-usrs .up-usrs-del form .popup-btn input:first-child,
+#edp-edt .wsp-add-popup form .popup-btn input:first-child,
+#edp-edt .wsp-del-popup form .popup-btn input:first-child,
+#edp-edt .wsp-pres-del-popup form .popup-btn input:first-child,
+#edp-edt .wsp-pres-add-popup form .popup-btn input:first-child,
+#edp-edt .up-usrs-del form .popup-btn input:first-child {
+  margin-right: 2%;
+}
+
+.edt-container form input {
+  border: 1px solid black;
+  padding: 1%;
+  border-radius: 3px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.edt-container form select {
+  margin-top: 1%;
+}
+.edt-container form select option {
+  color: #6444c6;
+  border: 1px solid white;
+}
+.edt-container form a {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.edt-container form input:hover {
+  cursor: pointer;
+  background-color: #6444c6;
+  color: white;
+}
+.edt-container table {
+  text-align: center;
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.edt-container table thead {
+  width: 100%;
+  color: white;
+  background-color: #6444c6;
+}
+.edt-container table tbody {
+  text-align: left;
+}
+
+.up-usrs-add {
+  padding-left: 5%;
+  display: none;
+  position: fixed;
+  top: 7.5%;
+  left: 45%;
+  text-align: left;
+  background: black;
+  box-shadow: 0px 2px 6px black;
+  border-radius: 3px;
+  color: white;
+}
+.up-usrs-add p {
+  margin-bottom: 2%;
+  font-size: 1em;
+}
+.up-usrs-add form input {
+  border: 1px solid white;
+  padding: 2%;
+  border-radius: 3px;
+}
+.up-usrs-add form select {
+  margin-top: 5%;
+}
+.up-usrs-add form select option {
+  color: #6444c6;
+  border: 1px solid white;
+}
+.up-usrs-add form .popup-btn {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.up-usrs-add form .popup-btn input:hover {
+  cursor: pointer;
+  background-color: #6444c6;
+  color: white;
+}
+.up-usrs-add form .popup-btn input:first-child {
+  margin-right: 2%;
+}
+
+.err_ajt {
+  width: 80%;
+  margin-right: 10%;
+  background-color: red;
+  text-align: left;
+}
+.err_ajt p {
+  color: white;
+}
+
+td,
+th {
+  border: 1px solid black;
+}
+
+#wp-cadres {
+  text-align: center;
+}
+#wp-cadres h1 {
+  margin-bottom: 5%;
+}
+#wp-cadres .articles-container {
+  text-align: left;
+  margin-bottom: 7.5%;
+}
+#wp-cadres .articles-container h1 {
+  font-size: 1em;
+}
+#wp-cadres .articles-container .wp-articles-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+#wp-cadres .articles-container .wp-articles-row .wp-article {
+  width: 240px;
+  height: 270px;
+  margin-bottom: 10%;
+  position: relative;
+  color: white;
+  border: 5px solid black;
+}
+#wp-cadres .articles-container .wp-articles-row .wp-article h1 {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+}
+#wp-cadres .articles-container .wp-articles-row .wp-article p {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+}
+#wp-cadres .articles-container .wp-articles-row .wp-article a {
+  position: absolute;
+  top: 110%;
+  left: 1.9%;
+  text-decoration: underline;
+}
+#wp-cadres .articles-container .wp-articles-row .wp-article img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wp-articles-end {
+  margin-left: 10%;
+}
+.wp-articles-end p {
+  margin-bottom: 2%;
+}
+.wp-articles-end a {
+  text-decoration: underline;
+  font-size: 0.95em;
+  margin-left: 2.5%;
 }
 
 /*# sourceMappingURL=styles.css.map */

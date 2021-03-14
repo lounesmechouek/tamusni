@@ -18,7 +18,8 @@ class Autoloader
 
     /**
      * Spécification du chemin du fichier de la classe
-     * @param $class string : représente la classe à charger
+     * Remarque : Ajouter les cas où typeUtilisateur = Eleve/Prof/Parent
+     * @param String $class : représente la classe à charger
      */
     static function autoload($class)
     {
@@ -49,8 +50,6 @@ class Autoloader
             $class = str_replace('Template' . '\\', '', $class);
             $class = str_replace('Admin' . '\\', '', $class);
             $class = str_replace('\\', '\'', $class);
-
-            
 
             if(is_readable(__DIR__ . '\\' . $typeClass . '\\' . $class . '.php')){
                 require_once __DIR__ . '\\' . $typeClass . '\\' . $class . '.php';

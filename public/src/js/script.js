@@ -76,21 +76,29 @@ $(document).ready(() => {
                 
 
                 //Affichage des catégories
-                if(titre === pa){
-                    $("<a href='?page="+pageName+"' class='wp-menu-elt active'><img class='wp-menu-elt-icon' src='"+ oppath +"' /><p class='wp-menu-elt-txt'>"+ titre +"</p></div>").appendTo(".wp-menu-container");
+                if(pageName === pa){
+                    $("<a href='?page="+pageName+"' class='wp-menu-elt active'><div class='wp-menu-elt-ext'><img class='wp-menu-elt-icon' src='"+ oppath +"' /><p class='wp-menu-elt-txt'>"+ titre +"</p></div></a>").appendTo(".wp-menu-container");
                 }else{
-                    $("<a href='?page="+pageName+"' class='wp-menu-elt'><img class='wp-menu-elt-icon' src='"+ path +"' /><p class='wp-menu-elt-txt'>"+ titre +"</p></div>").appendTo(".wp-menu-container");
+                    $("<a href='?page="+pageName+"' class='wp-menu-elt'><div class='wp-menu-elt-ext'><img class='wp-menu-elt-icon' src='"+ path +"' /><p class='wp-menu-elt-txt'>"+ titre +"</p></div></a>").appendTo(".wp-menu-container");
                 }  
-                  
-                //Affichage des sous-catégories
-                /*if(subcat != null){
-                   $("<div class='wp-menu-subcat-container'></div>").appendTo('.wp-menu-container:nth-child(3)');
-                    for(let j=0; j<subcat.length; j++){
-                        //$("<div class='wp-menu-subcat'><p>"+subcat[j]+"</p></div>").appendTo();
-                    }    
-                } */
+
+                if(subcat){
+                    $.each(subcat, function(cle, valeur){
+                        $("<a href='?page="+pageName+'.'+valeur.toLowerCase()+"' class='wp-menu-subcat'><p>"+valeur+"</p></a>").appendTo(".wp-menu-container > a:last");
+                    });
+                }               
             }
-            //$(".wp-menu-elt")
+
+            $(".wp-menu-elt").on({
+                mouseenter: function(event){
+                    console.log("OK");
+                    $(this).find(".wp-menu-subcat").css("display", "block");
+                },
+                mouseleave: function(event){
+                    $(this).find(".wp-menu-subcat").hide();
+                }
+            })
+
         },
         statusCode: {
             404: function(){

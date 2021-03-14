@@ -12,20 +12,20 @@ use App;
 /**
  * Class WelcomeController
  * Affichage de la page d'accueil
+ * @package App\Controller
  */
 class WelcomeController extends Controller
 {
     /**
-     * @var WelcomeController $instance : Les controlleurs sont des singletons (instanciés une seule fois dans l'app)
-     * @var WelcomeModel $welcomeModel : Garder l'instance du modèle
-     * @var WelcomeView $welcomeView : Garde l'instance de la vue
+     * @var WelcomeController $instance Les controlleurs sont des singletons (instanciés une seule fois dans l'app)
+     * @var WelcomeModel $welcomeModel Garder l'instance du modèle
+     * @var WelcomeView $welcomeView Garde l'instance de la vue
+     * @var String $template Le template utilisé pour la vue
      */
     private static $instance;
     private $welcomeModel;
     private $welcomeView;
     protected $template = "DefaultView";
-
-
 
     private function __construct()
     {
@@ -37,6 +37,9 @@ class WelcomeController extends Controller
         }
     }
 
+    /**
+     * @return WelcomeController Instance du singleton controller
+     */
     public static function getInstance()
     {
         if (self::$instance === null) {
@@ -54,21 +57,21 @@ class WelcomeController extends Controller
     }
 
     /**
-     * @return Array : Tableau contenant les chemins vers les diapos et leurs titres
+     * @return Array Tableau contenant les chemins vers les diapos et leurs titres
      */
     public function getDiapo()
     {
         return $this->welcomeModel->getDiapo();
     }
 
-    public function getMenu()
+    /**
+     * @return Array Tableau des articles disponibles
+     * */
+    public function getArticles()
     {
+        return $this->welcomeModel->getArticles();
     }
-
-    public function getBody()
-    {
-    }
-
+    
     /**
      * Effectue les configurations nécessaires puis appelle la méthode d'affichage de la vue
      */

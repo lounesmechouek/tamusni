@@ -14,7 +14,7 @@ class App
      * @var App $_instance : Design Pattern Singleton pour permettre d'avoir une seule instance de la classe App
      * @var Database $db_instance : Design Pattern Singleton pour avoir une seule connexion à la base de données
      */
-    private static $title = "Website";
+    private static $title = "Tamusni";
     private static $_instance;
     private static $db_instance;
     private static $content;

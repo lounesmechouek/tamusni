@@ -23,20 +23,28 @@
     .sb-elt-container {
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      //justify-content: space-around;
       align-items: center;
       width: 50%;
       margin-left: 25%;
+      margin-top: 10%;
       padding: 5%;
       border-radius: 25%;
 
       p {
+        position: relative;
         font-size: 0.8em;
         padding-left: 10%;
       }
       img {
+        position: relative;
+        left: 0;
         width: 20%;
       }
+    }
+
+    .selected {
+      background-color: $primary-color;
     }
 
     .sb-separator-container {
@@ -45,6 +53,10 @@
       width: 70%;
     }
   }
+}
+
+.sb-elt-container:hover {
+  background-color: $primary-color;
 }
 
 #online-header {
@@ -57,6 +69,29 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 7.5%;
+    margin-bottom: 5%;
   }
+
+  .usr-container {
+    background-color: $secondary-color;
+    padding: 1% 2.5% 1% 2.5%;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    color: white;
+
+    margin-right: 7.5%;
+
+    img {
+      position: relative;
+      left: 0;
+    }
+    p {
+      margin-left: 15%;
+    }
+  }
+}
+
+.usr-container:hover {
+  opacity: 0.9;
 }

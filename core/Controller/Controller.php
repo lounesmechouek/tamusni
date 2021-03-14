@@ -6,12 +6,21 @@ use App;
 /**
  * Class Controller
  * Classe mère dont dérivent les controlleurs concrets, permet de définir les méthodes et attributs génériques
+ * @package Core\Controller
  */
 class Controller
 {
+    /**
+     * @var String $viewPath Chemin vers le dossier des vues
+     * @var String $template Template utilisé par la vue du controlleur
+     */
     protected $viewPath = ROOT . "\\app\\View\\";
     protected $template;
 
+    /**
+     * @param String $data Chaîne entrée par l'utilisateur
+     * @return String Chaîne échappée et sécurisée
+     */
     protected function secureInput($data)
     {
         $data = trim($data);
@@ -20,15 +29,7 @@ class Controller
         return $data;
     }
 
-    protected function secure_form($form)
-    {
-        foreach ($form as $key => $value) {
-            $form[$key] = $this->secure_input($value);
-        }
-        return $form;
-    }
-
-    /*
+    /* Fonction en construction : Automatisation de l'affichage des vues
     public function render($view)
     {
         ob_start();

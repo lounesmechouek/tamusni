@@ -1,0 +1,44 @@
+{
+    "admin" : [
+        {
+            "title" : "Gestion articles",
+            "image" : ".\\assets\\users\\admin\\articles.jpg",
+            "pageName" : "admin.website"
+        },
+        {
+            "title" : "Page présentation",
+            "image" : ".\\assets\\users\\admin\\presentation.jpg",
+            "pageName" : "admin.website"
+        },
+        {
+            "title" : "Emplois du temps",
+            "image" : ".\\assets\\users\\admin\\edt.jpg",
+            "pageName" : "admin.edt"
+        },
+        {
+            "title" : "Gestion enseignants",
+            "image" : ".\\assets\\users\\admin\\ens.jpg",
+            "pageName" : "admin.users"
+        },
+        {
+            "title" : "Gestion utilisateurs",
+            "image" : ".\\assets\\users\\admin\\users.jpg",
+            "pageName" : "admin.users"
+        },
+        {
+            "title" : "Restauration",
+            "image" : ".\\assets\\users\\admin\\resto.jpg",
+            "pageName" : "admin.resto"
+        },
+        {
+            "title" : "Page Contact",
+            "image" : ".\\assets\\users\\admin\\settings.jpg",
+            "pageName" : "admin.website"
+        },
+        {
+            "title" : "Autres",
+            "image" : ".\\assets\\users\\admin\\profil.jpg",
+            "pageName" : "admin.settings"
+        }
+    ]
+}

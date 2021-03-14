@@ -1,0 +1,44 @@
+{
+    "admin" : [
+        {
+            "title" : "Dashboard",
+            "path" : ".\\assets\\material\\dashboard-icon.svg",
+            "pageName" : "admin.dashboard"
+        },
+        {
+            "title" : "Gestion site",
+            "path" : ".\\assets\\material\\website-icon.svg",
+            "pageName" : "admin.website"
+        },
+        {
+            "title" : "Utilisateurs",
+            "path" : ".\\assets\\material\\users-icon.svg",
+            "pageName" : "admin.users"
+        },
+        {
+            "title" : "EdT",
+            "path" : ".\\assets\\material\\edt-icon.svg",
+            "pageName" : "admin.edt"
+        },
+        {
+            "title" : "Resto",
+            "path" : ".\\assets\\material\\resto-icon.svg",
+            "pageName" : "admin.resto"
+        }
+    ],
+    "eleve" : [
+        {
+
+        }
+    ],
+    "parent" : [
+        {
+
+        }
+    ],
+    "enseignant" : [
+        {
+
+        }
+    ]
+}

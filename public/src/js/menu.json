@@ -29,7 +29,7 @@
         "op-path" : "", 
         "pageName" : "login",
         "subcat" : [
-            "Parents", "Élèves"
+            "parent", "eleve"
         ]
     },
     {

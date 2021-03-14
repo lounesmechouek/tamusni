@@ -46,18 +46,25 @@
   padding-right: 5%;
 
   .wp-menu-elt {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    display: block;
     font-family: "Poppins-SemiBold";
-
     background-color: $primary-color;
     color: white;
     border-radius: 35%;
     border: 3px solid $primary-color;
-
     padding: 1.25%;
+
+    .wp-menu-elt-ext {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .wp-menu-subcat {
+      margin-top: 2%;
+      display: none;
+    }
 
     p {
       padding-left: 15%;

@@ -3,7 +3,15 @@
     namespace App\View\Template;
     use App;
 
+    /**
+     * Class DefaultView
+     * Définit le template par défaut (pour les pages non-authentifiées)
+     * @package App\View\Template
+     */
     class DefaultView{
+        /**
+         * Code HTML de l'entête
+         */
         private function getHeader(){ 
 ?>
 <!DOCTYPE html>
@@ -46,19 +54,26 @@
         </div>
     </section>
 <?php }
+        /**
+         * Code HTML de la partie centrale
+         * C'est le contrôleur de la page concernée qui fait un appel dynamiquement en spécifiant $contenu
+         */
     private function getCorps($content){
 ?>
     <p><?= $content ?></p>
 <?php }
+        /**
+         * Code HTML du bas de page
+         */
     private function getFooter(){
 ?>
     <section id="default-footer">
         <div class="df-container">
             <div class="df-column">
                 <ul>
-                    <li><a href="">Accueil</a></li>
-                    <li><a href="">L'École</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="?page=welcome">Accueil</a></li>
+                    <li><a href="?page=presentation">L'École</a></li>
+                    <li><a href="?page=contact">Contact</a></li>
                 </ul>
             </div>
             <div class="df-logo-container">
@@ -69,21 +84,22 @@
                 <ul>
                     <li>Espaces
                         <ul>
-                            <li><a href="">Espace Parents</a></li>
-                            <li><a href="">Espace Élèves</a></li>
+                            <li><a href="?page=login.parent">Espace Parents</a></li>
+                            <li><a href="?page=login.eleve">Espace Élèves</a></li>
                         </ul>
                     </li>
                     <li>Cycles
                         <ul>
-                            <li><a href="">Primaire</a></li>
-                            <li><a href="">Collège</a></li>
-                            <li><a href="">Secondaire</a></li>
+                            <li><a href="?page=cycles.primaire">Primaire</a></li>
+                            <li><a href="?page=cycles.moyen">Moyen</a></li>
+                            <li><a href="?page=cycles.secondaire">Secondaire</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
-    </section>    
+    </section> 
+<p id="info" style="display:none"><?= $_GET["page"]; ?><p>   
 </body>
 <script type="text/javascript" src="../../public/src/js/jquery.js"></script>
 <script type="text/javascript" src="../../public/src/js/script.js"></script>
@@ -91,6 +107,9 @@
 </html>
 <?php }
 
+    /**
+     * Fonction pour afficher la page 
+     */
     public function displayView($content){
         $this->getHeader();
         $this->getCorps($content);

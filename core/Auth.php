@@ -6,6 +6,7 @@ use Core\Database\Database;
 /**
  * Class Auth
  * Permet d'authentifier un utilisateur + Vérifier si une session est déjà en cours
+ * @package Core
  */
 class Auth{
 

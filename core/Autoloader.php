@@ -3,8 +3,8 @@
 namespace Core;
 
 /**
- * Implémentation d'un autoloader
- * @package App
+ * Implémentation d'un autoloader pour le package Core
+ * @package Core
  */
 class Autoloader
 {
